@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "prebuild": "npm run index",
+    "index": "node ./node_modules/vitepress-plugin-search/src/index.js",
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs"
+  },
+  "dependencies": {
+    "vitepress": "^1.0.0-alpha.4"
+  },
+  "devDependencies": {
+    "vitepress-plugin-search": "^0.0.3"
+  }
+}

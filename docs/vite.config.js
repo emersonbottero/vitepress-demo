@@ -1,10 +1,12 @@
 import { defineConfig } from "vite";
+import { MermaidPlugin } from "vitepress-plugin-mermaid";
+import { SearchPlugin } from "vitepress-plugin-search";
 
 export default defineConfig({
-  resolve: {
-    alias: {
-      "./components/AlgoliaSearchBox.vue":
-        "vitepress-plugin-search/src/Search.vue",
-    },
-  },
+  plugins: [
+    MermaidPlugin({
+      mermaidTheme: "forest",
+    }),
+    SearchPlugin(),
+  ],
 });

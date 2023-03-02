@@ -1,3 +1,15 @@
+<script setup>
+import {onMounted} from 'vue'
+
+onMounted(() =>{
+
+  if (import.meta.hot) {
+    import.meta.hot.send('my:from-client', { msg: 'Hey!.. Im from client side' })
+}
+else
+console.log("no meta hot found...");
+  })
+</script>
 ## Introduction
 
 Before you can start making API calls, you need to create your personal access token.
@@ -11,8 +23,7 @@ Before you can start making API calls, you need to create your personal access t
 Be careful once you close the window with token you are not able to see it again!
 
 :::
-
-```mermaid
+```mermaid {myClass}
 flowchart TD
   Start --> Stop
 ```

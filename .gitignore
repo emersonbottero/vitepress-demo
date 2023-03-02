@@ -10,3 +10,4 @@ dist
 sw.*
 .env
 lunr_index.js
+docs/.vitepress/cache
